@@ -1,0 +1,120 @@
+.Sphere {
+    transition: transform 3s ease; /* Transition for transform */
+    opacity:0;
+    transition: opacity 1s ease;
+
+    position: absolute;
+    z-index: 100;
+    
+    
+   
+    /* opacity: .3; */
+  }
+  
+  .Sphere.larger {
+    transform: scale(1.15); /* Scale up when selected */
+  }
+
+  .Sphere.selected{
+
+    /* box-shadow: 100 25px 100px rgb(0 0 0 / 0.2);
+    
+     */
+
+    box-shadow: -.2em -.3em rgb(231, 231, 230),  .2em 0 .4em rgb(197, 197, 197);;
+    border-radius: 50%;
+
+    transition: box-shadow 1s ease; 
+
+  }
+
+  .Sphere.selected_scnd{
+    opacity: 1;
+    transition: opacity 1s ease; 
+  }
+
+  .Sphere.original{
+    opacity: 1;
+  }
+
+
+ 
+  
+  .gradient-circle {
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+    cursor: pointer;
+  }
+
+
+  .Line{
+    opacity: .1;
+  }
+
+  @keyframes drawLine {
+    from {
+      stroke-dasharray: 0, 100%;
+    }
+    to {
+      stroke-dasharray: 100%, 200%;
+    }
+  }
+  
+  .Line-Svg line {
+    animation: drawLine 2.5s linear forwards;
+  }
+
+  .Buttons_ClosePage_Container{
+    /* background: linear-gradient(to left, #5e6a77, #f5f5f5);;
+    width: max-content; */
+    height: max-content;
+    position: absolute;
+    right: 0;
+    top: -30%;
+
+    border-radius:50%;
+    cursor: pointer;
+  }
+
+  
+
+  .slide-in-page{
+    
+    transition: opacity .5s ease-in-out, transform 1s ease-in-out;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+    bottom: 0;
+    left: 45%;
+    height: 110%;
+    width: 50%;
+    background-color: rgb(234, 234, 240);
+    opacity: 0;
+    transform: translateY(30%);
+    margin-right: 4em;
+    
+    /* visibility: hidden; */
+
+  }
+
+
+  .slide-in-page.active{
+
+    /*Deprecated*/
+    /* position: absolute; */
+    visibility:visible;
+    position: relative;
+    right: 0; /*start from right side */
+    width: 50%;
+    opacity: .8;
+    left: 45%;
+
+    transform: translateY(-900px);
+
+    margin-right: 4em;
+    
+    
+  }
+
+
+  .slide-in-page__content{
+    
+  }
